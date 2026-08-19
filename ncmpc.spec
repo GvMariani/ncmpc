@@ -2,7 +2,7 @@
 
 Summary:		Ncurses client for MPD
 Name:	ncmpc
-Version:		0.53
+Version:		0.54
 Release:		1
 License:		GPLv2+
 Group:	Sound
@@ -25,8 +25,7 @@ MPD running on a machine on the local network, and controls this with an
 interface inspired by cplay. If it is used with lirc and irpty it can be
 used to manage playlists and control MPD with a remote control.
 
-%files
-#-f %%{name}.lang
+%files -f %{name}.lang
 %license COPYING
 %doc README.rst AUTHORS NEWS doc/config.sample doc/keys.sample doc/ncmpc.lirc
 %{_bindir}/%{name}
@@ -51,6 +50,6 @@ sed -i 's/51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA/31 Milk Str
 
 rm -rf %{buildroot}%{_docdir}/%{name}/
 
-#find_lang %%{name}
+%find_lang %{name}
 
 
